@@ -1,10 +1,10 @@
 *{
     margin : 0;
     padding: 0;
-
+ 
 }
 
-@mixin button-base() {
+/* @mixin button-base() {
     @include typography(button);
     @include ripple-surface;
     @include ripple-radius-bounded;
@@ -22,4 +22,39 @@
       cursor: default;
       pointer-events: none;
     }
+  } */
+
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    background: coral;
+  }
+
+  .first-part {
+    display: flex;
+    flex-flow:column nowrap;
+    box-sizing: border-box;
+    height: 100px;
+    background-color: rgb(113, 155, 155);
+    width:100%;
+    padding: 100px;
+    margin: 10px 5px;
+  }
+
+  /* .second-part{
+    display: flex;
+    flex-flow:column nowrap;
+    box-sizing: border-box;
+    height: 300px;
+    background-color: rgb(50, 148, 205);
+    /* background: url('https://api.iconify.design/ri/html5-line.svg') no-repeat center center / contain; */
+  .icon{
+    font-size: 200px;
+  
+  }
+
+  .icons{
+    display:flex;
+    flex-flow:row wrap;
   }
