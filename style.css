@@ -4,6 +4,7 @@
  
 }
 
+
 /* @mixin button-base() {
     @include typography(button);
     @include ripple-surface;
@@ -24,23 +25,28 @@
     }
   } */
 
-
+body{
+  background-color:rgba(255, 0, 0, 0.347) ;
+}
   .container{
     display: flex;
     flex-direction: column;
     background: coral;
   }
 
-  .first-part {
+  .skills-bar {
     display: flex;
     flex-flow:column nowrap;
+    justify-content: center;
+    align-items:center;
     box-sizing: border-box;
-    height: 100px;
     background-color: rgb(113, 155, 155);
     width:100%;
     padding: 100px;
-    margin: 10px 5px;
+    margin: 0px 5px;
+    border: 2px solid rgba(0, 0, 0, 0.392);
   }
+
 
   /* .second-part{
     display: flex;
@@ -50,11 +56,45 @@
     background-color: rgb(50, 148, 205);
     /* background: url('https://api.iconify.design/ri/html5-line.svg') no-repeat center center / contain; */
   .icon{
-    font-size: 200px;
+    font-size: 150px;
+    margin: 20px 40px;
+    opacity: 0.8;
+    border:2px dotted black;
+    color:rgb(0, 0, 0);
   
   }
 
+  .icon:hover{
+    opacity:1;
+  }
+
   .icons{
+
     display:flex;
     flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between;
   }
+
+  .nav-icon{
+    width:30px;
+    font-size:25px;
+  }
+
+  .navbar{
+    display: flex;
+    /* flex-flow: column nowrap; */
+    justify-content: flex-end;
+    width:100%;
+    background-color: aliceblue;
+  }
+
+  .navbar>ul{
+    display: flex;
+    
+  }
+
+  /* .nav-icon:hover{
+
+  } */
+  
