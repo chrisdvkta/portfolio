@@ -4,13 +4,18 @@
     box-sizing: border-box;
   --primary-color: #151515;
   --default-font-family: "Space Grotesk", sans-serif;
-    /* color:white; */
     --icon-hover: #6f42c1;
     list-style-type: none;
-    color:white;
     --border-color: rgb(164, 152, 233);
+    --dark-gray:#242424;
+    color:white;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
 
 body{
   background-color: var(--primary-color);
@@ -82,14 +87,13 @@ body{
 }
 
 .skill-icon{
-  margin-bottom: 2rem !important;
+  /* margin-bottom: 2rem !important; */
   width:25%;
-  background-color: #6f42c1;
 }
 
 
 
-.languagename{
+.language{
   text-align: center !important;
 }
 
@@ -99,47 +103,109 @@ body{
   filter: drop-shadow(6px 6px 10px rgba(69, 92, 23, 0.2));
 }
 
+.languagename{
+  flex: 0 0 auto;
+  margin-top:5px;
+}
 
 .icon:hover{
   color:#aaeaf4;
   opacity: 0.4;
 }
 .projectscontainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin:2rem 8rem;
+  padding-top: 6rem;
 }
 
 .projectcards{
-  display:flex;
-  flex-flow: column ;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4.5rem 0rem;
 }
 
-.project-singular-cointainer{
+.project{
   border:1px dotted white;
-  height:75px;
-  width: 75px;
+  margin-bottom: 3rem !important;
+  flex: 0 0 auto;
 }
 
-.inputbox ::after,::before{
-
+.contactcontainer{
+  padding: 6rem 8rem;
+  background-color: var(--dark-gray);
 }
 
-#nameInput:valid{
-border: 2px solid green; 
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  /* add margins */
 }
 
-.inputbox:hover{
-  /* transition: */
+.row>*{
+  flex-shrink: 0;
+  width : 100%;
+  max-width: 100%;
 }
 
-
-input{
-  color:black;
+.contacttext{
+  margin-top: 1.3rem !important;
+  font-size: 2.7rem;
+  font-weight: 600;
 }
 
-.textarea {
-  color: black;
+.contactsubtext{
+  font-size: 1rem;
+  line-height: 2;;
+  margin-bottom: 0;
+  color: var(--lightgray);
+}
+
+form{
+  display: block;
+}
+
+.formgroup{
+  margin:1rem 0rem !important;
+}
+
+.inputcontainer{
+ width:100%; 
+}
+
+input[type=text],input[type=email]{
+  width:100%;
+  padding: 0.8rem 1rem;
+  box-sizing:border-box;
+  border-radius:0;
+  background-color: var(--dark-gray);
+  color:white;
+  border:solid transparent;
+  outline: none;
+  border-bottom: 1px solid #ffff;
+}
+
+button,input,textarea{
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea{
+  width: 100%;
+  border-radius: 0;
+  background-color: var(--dark-gray);
+}
+
+.contactbtn{
+  font-family: var(--default-font-family);
+  font-size:1rem;
+  font-weight: 600;
+  background-color: var(--dark-gray);
+  color: white;
+  display:inline-block;
+  text-transform: uppercase;
+  outline:none;
+  border: solid transparent;
+  border-bottom: 2px solid #34cffe;
+  padding-bottom:0.5rem;
 }
 
