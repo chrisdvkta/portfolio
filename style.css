@@ -1,100 +1,145 @@
 *{
     margin : 0;
     padding: 0;
+    box-sizing: border-box;
+  --primary-color: #151515;
+  --default-font-family: "Space Grotesk", sans-serif;
+    /* color:white; */
+    --icon-hover: #6f42c1;
+    list-style-type: none;
+    color:white;
+    --border-color: rgb(164, 152, 233);
+}
+
+
+body{
+  background-color: var(--primary-color);
+  font-family: var(--default-font-family);
+}
+
+.container{
+  display:block;
+}
+
+.heroname,.skills-bar{
+  border-bottom:4px solid #4EE1A0;
+}
+
+.headercontainer{
+  margin: 2.2rem 8rem;
+  display: flex;
+  flex-flow:row;
+  justify-content: space-around;
+  align-items: center;
  
 }
 
-
-/* @mixin button-base() {
-    @include typography(button);
-    @include ripple-surface;
-    @include ripple-radius-bounded;
-  
-    display: inline-flex;
-    position: relative;
-    height: $button-height;
-    border: none;
-    vertical-align: middle;
-  
-    &:hover { cursor: pointer; }
-  
-    &:disabled {
-      color: $mdc-button-disabled-ink-color;
-      cursor: default;
-      pointer-events: none;
-    }
-  } */
-
-body{
-  background-color:rgba(255, 0, 0, 0.347) ;
+.headercontainer>p{
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
-  .container{
-    display: flex;
-    flex-direction: column;
-    background: coral;
-  }
 
-  .skills-bar {
-    display: flex;
-    flex-flow:column nowrap;
-    justify-content: center;
-    align-items:center;
-    box-sizing: border-box;
-    background-color: rgb(113, 155, 155);
-    width:100%;
-    padding: 100px;
-    margin: 0px 5px;
-    border: 2px solid rgba(0, 0, 0, 0.392);
-  }
+.headericon{
+  font-size: 1.3rem;
+}
+
+.nav-icon{
+  margin-left:2.5rem;
+}
+
+.herocontainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid white;
+}
+
+.skills-bar{
+ margin:0rem 8rem;
+ border-top: 2px solid white;
+ border-bottom: 2px solid white;
+
+}
+
+.skillheader{
+  padding-top:2rem;
+  font-size: 2.6rem;
+  border-bottom: 4px solid #34cffe;
+  display:inline-block;
+}
 
 
-  /* .second-part{
-    display: flex;
-    flex-flow:column nowrap;
-    box-sizing: border-box;
-    height: 300px;
-    background-color: rgb(50, 148, 205);
-    /* background: url('https://api.iconify.design/ri/html5-line.svg') no-repeat center center / contain; */
-  .icon{
-    font-size: 150px;
-    margin: 20px 40px;
-    opacity: 0.8;
-    border:2px dotted black;
-    color:rgb(0, 0, 0);
+.skillsrow{
+  padding:4rem 0rem 1rem;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #11432d;
   
-  }
+}
 
-  .icon:hover{
-    opacity:1;
-  }
+.skill-icon{
+  margin-bottom: 2rem !important;
+  width:25%;
+  background-color: #6f42c1;
+}
 
-  .icons{
 
-    display:flex;
-    flex-flow:row wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
 
-  .nav-icon{
-    width:30px;
-    font-size:25px;
-  }
+.languagename{
+  text-align: center !important;
+}
 
-  .navbar{
-    display: flex;
-    /* flex-flow: column nowrap; */
-    justify-content: flex-end;
-    width:100%;
-    background-color: aliceblue;
-  }
+.icon{
+  color:#34cffe;
+  font-size: 80px;
+  filter: drop-shadow(6px 6px 10px rgba(69, 92, 23, 0.2));
+}
 
-  .navbar>ul{
-    display: flex;
-    
-  }
 
-  /* .nav-icon:hover{
+.icon:hover{
+  color:#aaeaf4;
+  opacity: 0.4;
+}
+.projectscontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  } */
-  
+.projectcards{
+  display:flex;
+  flex-flow: column ;
+}
+
+.project-singular-cointainer{
+  border:1px dotted white;
+  height:75px;
+  width: 75px;
+}
+
+.inputbox ::after,::before{
+
+}
+
+#nameInput:valid{
+border: 2px solid green; 
+}
+
+.inputbox:hover{
+  /* transition: */
+}
+
+
+input{
+  color:black;
+}
+
+.textarea {
+  color: black;
+}
+
