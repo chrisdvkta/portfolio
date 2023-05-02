@@ -22,6 +22,10 @@ body{
   font-family: var(--default-font-family);
 }
 
+div{
+  display:block;
+  
+}
 .container{
   display:block;
 }
@@ -82,13 +86,13 @@ body{
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: #11432d;
   
 }
 
 .skill-icon{
   /* margin-bottom: 2rem !important; */
   width:25%;
+  display:inline-block;
 }
 
 
@@ -113,22 +117,63 @@ body{
   opacity: 0.4;
 }
 .projectscontainer{
-  margin:2rem 8rem;
-  padding-top: 6rem;
+  margin: 2rem 8rem;
+  padding-top: 8rem;
+  /* background: #b94040; */
 }
 
-.projectcards{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 4.5rem 0rem;
+.project {
+margin: 3rem !important;
+flex: 0 0 auto;
+width:100%;
+background: #242424;
+border: 2px dashed white;
 }
 
-.project{
-  border:1px dotted white;
-  margin-bottom: 3rem !important;
-  flex: 0 0 auto;
+.viewproject{
+margin-top: 1rem !important;
 }
 
+img{
+  vertical-align: center;
+  overflow-clip-margin: content-box;
+  overflow:clip;
+}
+
+.project-img{
+height:500px;
+width:600px;
+max-width: 100%;
+}
+
+@media screen and (max-wdith:1024px) {
+.project-img{
+  height:500px;
+  max-width:100%;
+}
+}
+
+@media screen and (max-width: 775px){
+.projectimg {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+}
+}
+
+.projecttitle{
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 775px){
+.projecttitle {
+    font-size: 1.5rem;
+  }
+}
+  
 .contactcontainer{
   padding: 6rem 8rem;
   background-color: var(--dark-gray);
@@ -208,4 +253,3 @@ textarea{
   border-bottom: 2px solid #34cffe;
   padding-bottom:0.5rem;
 }
-
