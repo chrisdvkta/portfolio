@@ -9,6 +9,7 @@
     --border-color: rgb(164, 152, 233);
     --dark-gray:#242424;
     color:white;
+    scroll-behavior: smooth;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -64,12 +65,14 @@ div{
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 2px solid white;
+  height:100vh;
 }
 
 .skills-bar{
  margin:0rem 8rem;
  border-top: 2px solid white;
  border-bottom: 2px solid white;
+ height:100vh;
 
 }
 
@@ -120,14 +123,22 @@ div{
   margin: 2rem 8rem;
   padding-top: 8rem;
   /* background: #b94040; */
+  /* height:100vh; */
+  flex:1;
 }
 
 .project {
-margin: 3rem !important;
-flex: 0 0 auto;
+  margin: 3rem !important;
+  flex: 0 0 auto;
+  overflow: hidden;
 width:100%;
 background: #242424;
 border: 2px dashed white;
+transition: all 0.4s ease-in-out;
+}
+
+.proeject>*{
+  overflow:clip;
 }
 
 .viewproject{
@@ -136,28 +147,30 @@ margin-top: 1rem !important;
 
 img{
   vertical-align: center;
-  overflow-clip-margin: content-box;
   overflow:clip;
+  overflow-clip-margin: content-box;
 }
 
 .project-img{
-height:500px;
-width:600px;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 max-width: 100%;
+overflow:hidden;
+
 }
 
 @media screen and (max-wdith:1024px) {
 .project-img{
-  height:500px;
-  max-width:100%;
+
+  max-width:fit-content;
 }
 }
 
 @media screen and (max-width: 775px){
-.projectimg {
+.project-img {
     width: 100%;
-    max-width: 100%;
-    height: 450px;
+    max-width: fit-content;
+   
 }
 }
 
@@ -174,9 +187,22 @@ max-width: 100%;
   }
 }
   
+.project-img:hover{
+ transform:scale(1.05);
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  /* *{
+    transition:0.4s !important;
+  } */
+}
+
+
 .contactcontainer{
   padding: 6rem 8rem;
   background-color: var(--dark-gray);
+  flex:1;
 }
 
 .row{
