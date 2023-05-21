@@ -12,13 +12,18 @@
     <title></title>
 </head>
 <body>
+    <div class="intro">
+        <h1 class="logo-header" >
+          <span class="logo">Welc</span><span class="logo">ome.</span><br>
+        </h1>
+  </div>
     <div class="container">
         <div class="headercontainer">
             <p class ="name">Krish Devkota</p>
                 <div class="headericon">
-                    <i class="devicon-github-plain nav-icon"></i>
-                    <i class="devicon-linkedin-plain nav-icon"></i>
-                    <i class="devicon-google-plain nav-icon"></i>
+                   <a href="https://github.com/chrisdvkta" target="_blank"> <i class="devicon-github-plain nav-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/krish-devkota/" target="_blank"><i class="devicon-linkedin-plain nav-icon"></i></a>
+                    <a href="mailto:krish.devkota@deerwalk.edu.np" target="_blank"><i class="devicon-google-plain nav-icon"></i></a>
                 </div>    
           </div>
                 
@@ -35,43 +40,35 @@
         <div class="skills-bar">
             <h2 class="skillheader">Skills</h2>
                 <div class="skillsrow">
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 1;">
                         <i class="devicon-c-line icon"></i>              
                         <h3 class="langaugename">C</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 2;">
                         <i class="devicon-cplusplus-line icon"></i>
                         <h3 class="langaugename">C++</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 3;">
                         <i class="devicon-javascript-plain icon"></i>
                         <h3 class="langaugename">JavaScript</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 4;">
                         <i class="devicon-nodejs-plain icon"></i>
                         <h3 class="langaugename">NodeJS</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 5;">
                         <i class="devicon-arduino-plain icon"></i>              
                         <h3 class="langaugename">Arduino</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style = "--animation-order: 1;">
                         <i class="devicon-photoshop-plain icon"></i>
                         <h3 class="langaugename">Photoshop</h3>
                     </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden" style="--order:1 ;">
                         <i class="devicon-github-plain icon"></i>
                         <h3 class="langaugename">Github</h3>
                     </div>
-                    <div class="language skill-icon">
-                        <i class="devicon-flutter-plain icon"></i>
-                        <h3 class="langaugename">Flutter</h3>
-                    </div>
-                    <div class="language skill-icon">
-                        <i class="devicon-premierepro-plain icon"></i>
-                        <h3 class="langaugename">Premiere Pro</h3>
-                    </div>
-                    <div class="language skill-icon">
+                    <div class="language skill-icon hidden">
                         <i class="devicon-aftereffects-plain icon"></i>          
                         <h3 class="langaugename">After Effects</h3>
                     </div>        
@@ -81,24 +78,30 @@
             <h2 class="projectheader">Projects</h2>
             <div class="projectcards">
                 <div class="project">
-                    <img src="Google_Homepage.svg" alt="" class="project-img">
-                    <h3 class="projecttitle">Google Homepage</h3>
-                    <div class="viewproject">
-                        <a href="https://designo-adetutudeborah.vercel.app/" target="_blank" class="view">View Project</a>
-                       </div>
-                </div>
-                <div class="project">
-                    <img src="Screenshot 2023-05-08 094100.png" alt="" class="project-img">
-                    <h3 class="projecttitle">Rock Paper Scissors</h3>
-                    <div class="viewproject">
-                        <a href="https://designo-adetutudeborah.vercel.app/" target="_blank" class="view">View Project</a>
-                       </div>
-                </div>
-                <div class="project">
-                    <img src="etch.jpg" alt="" class="project-img">
+                    <div class="img-container">
+                        <img src="./footage/etch.png" alt="" class="project-img">
+                    </div>
                     <h3 class="projecttitle">Etch-A-Sketch</h3>
                     <div class="viewproject">
-                        <a href="https://designo-adetutudeborah.vercel.app/" target="_blank" class="view">View Project</a>
+                        <a href="https://chrisdvkta.github.io/etch-a-sketch-test/" target="_blank" class="view">View Project</a>
+                       </div>
+                </div>
+                <div class="project">
+                    <div class="img-container">
+                        <img src="./footage/Google_Homepage.svg.png" alt="" class="project-img">
+                    </div>
+                    <h3 class="projecttitle">Google Homepage</h3>
+                    <div class="viewproject">
+                        <a href="https://chrisdvkta.github.io/google-homepage/" target="_blank" class="view">View Project</a>
+                       </div>
+                </div>
+                <div class="project">
+                    <div class="img-container">
+                        <img src="./footage/rock papers.png" alt="" class="project-img">
+                    </div>
+                    <h3 class="projecttitle">Rock Paper Scissors</h3>
+                    <div class="viewproject">
+                        <a href="https://chrisdvkta.github.io/Rock_paper_scissors/" target="_blank" class="view">View Project</a>
                        </div>
                 </div>
             </div>
@@ -138,12 +141,15 @@
                 </div>
             </h2>
         </div>
-        <div class="footercontainer">
-            <span>Krish Devkota&copy</span>
-        </div>
-
-       
-        </div>
-  
+            <div class="footercontainer">
+                <div class="footerheadername">
+                    <p class="footername">Krish Devkota &copy</p>
+                </div>
+                <div class="footericons">
+                    <a href="https://github.com/chrisdvkta" target="_blank"> <i class="devicon-github-plain nav-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/krish-devkota/" target="_blank"><i class="devicon-linkedin-plain nav-icon"></i></a>
+                    <a href="mailto:krish.devkota@deerwalk.edu.np" target="_blank"><i class="devicon-google-plain nav-icon"></i></a>
+                 </div>
+             </div>
 </body>
 </html>
