@@ -12,6 +12,13 @@ const observe = new IntersectionObserver((entries)=>{
 const hide = document.querySelectorAll('.hidden');
 hide.forEach((e)=>observe.observe(e));
 
+// Google Analytics Event Tracking
+function trackEvent(eventName, parameters = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, parameters);
+    }
+}
+
 
 // page loader
 let intro = document.querySelector('.intro')
@@ -38,3 +45,44 @@ let intro = document.querySelector('.intro')
       },2300);
     })
   })
+
+// Track project link clicks
+document.addEventListener('DOMContentLoaded', () => {
+    // Track project clicks
+    const projectLinks = document.querySelectorAll('.view');
+    projectLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const projectTitle = e.target.closest('.project').querySelector('.projecttitle').textContent;
+            trackEvent('project_click', {
+                'project_name': projectTitle,
+                'link_url': e.target.href
+            });
+        });
+    });
+
+    // Track social media clicks
+    const socialLinks = document.querySelectorAll('.headericon a, .footericons a');
+    socialLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            let platform = 'unknown';
+            if (e.target.href.includes('github')) platform = 'github';
+            else if (e.target.href.includes('linkedin')) platform = 'linkedin';
+            else if (e.target.href.includes('mailto')) platform = 'email';
+            
+            trackEvent('social_click', {
+                'social_platform': platform,
+                'link_url': e.target.href
+            });
+        });
+    });
+
+    // Track contact form submission
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            trackEvent('contact_form_submit', {
+                'form_location': 'main_contact_form'
+            });
+        });
+    }
+});
